@@ -24,10 +24,11 @@ public class MetodoTrapezoide {
 
     static double integrar(double a, double b, int N) {
         double h = (b - a) / N;
-
+        double x = 0;
         double area = (funcion(a) + funcion(b)) / 2;
+        
         for (int i = 1; i < N; i++) {
-            double x = a + h * i;
+            x = a + h * i;
             area = area + funcion(x);
         }
 
