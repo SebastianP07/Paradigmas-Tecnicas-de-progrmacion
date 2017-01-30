@@ -10,7 +10,7 @@ public class SaltandPepper {
     public static void main(String[] args) throws IOException {
         BufferedImage image = ImageIO.read(new File("/home/jrudascas/Desktop/lenna_gris.png"));
 
-        Double random;
+        double random;
         
         for (int i = 0; i < image.getWidth(); i++) {
             for (int j = 0; j < image.getHeight(); j++) {
@@ -32,8 +32,7 @@ public class SaltandPepper {
         
         for (int i = 0; i < image.getWidth(); i++) {
             for (int j = 0; j < image.getHeight()-1; j++) {
-                if ((image.getRGB(i,j) == Color.WHITE.hashCode()) || (image.getRGB(i,j) == Color.BLACK.hashCode())){
-                    //newImage.setRGB(i, j, image.getRGB(i, j + 1));                    
+                if ((image.getRGB(i,j) == Color.WHITE.hashCode()) || (image.getRGB(i,j) == Color.BLACK.hashCode())){                  
                     newImage.setRGB(i, j, image.getRGB(i,j+1));
                 }                
             }
