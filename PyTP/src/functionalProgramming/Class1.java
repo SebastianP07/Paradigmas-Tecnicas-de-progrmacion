@@ -21,4 +21,8 @@ public class Class1 implements SaludoMañanaInterfac{
     public void saludo() {
         System.out.println("Buenos dias");
     }*/
+    
+    void metodo1(int a, String[] hh){
+        
+    }
 }

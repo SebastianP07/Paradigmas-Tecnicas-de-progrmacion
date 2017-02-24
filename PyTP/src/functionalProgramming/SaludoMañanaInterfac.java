@@ -1,12 +1,13 @@
 package functionalProgramming;
 
 //Interfaz funcional
+@FunctionalInterface
 public interface SaludoMañanaInterfac {
     int a = 201;
     
     //Metodos abstractos
     void saludo2();
-    //void saludo22();
+//    void saludo22();
     
     //Metodo Statico
     public static void saludo3(){

@@ -12,6 +12,7 @@ package functionalProgramming;
 public class Test2 {
 
     public static void main(String[] arg) {
+        
         AbstracClass abstracClass = new AbstracClass() {
             @Override
             void function1() {
@@ -33,8 +34,11 @@ public class Test2 {
         
         SaludoMañanaInterfac.saludo3();
         
-        /*SaludoMañanaInterfac saludo2 = () -> {
-         System.out.println("Implementación Interfaz Anonima");
-         };*/
+        SaludoMañanaInterfac saludo2 = () -> System.out.println("Implementación Interfaz Anonima");         ;
+    }
+    
+    
+    public int function1(int z){
+        return z + 2;
     }
 }

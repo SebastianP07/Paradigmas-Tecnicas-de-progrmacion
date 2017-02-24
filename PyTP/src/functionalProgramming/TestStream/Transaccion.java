@@ -1,26 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package functionalProgramming.TestStream;
 
+import java.util.Comparator;
 import java.util.Date;
 
-/**
- *
- * @author jrudascas
- */
 public class Transaccion {
 
+    String id;
     int precio;
     Date fecha;
     Proveedor proveedor;
 
-    public Transaccion(int precio, Date fecha, Proveedor proveedor) {
+    public static Comparator<Transaccion> TransaccionNameComparator = new Comparator<Transaccion>() {
+
+        @Override
+        public int compare(Transaccion t1, Transaccion t2) {                    //Asc
+            return t2.getId().compareTo(t1.getId());
+        }
+
+    };
+
+    public Transaccion(String id, int precio, Date fecha, Proveedor proveedor) {
+        this.id = id;
         this.precio = precio;
         this.fecha = fecha;
         this.proveedor = proveedor;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public int getPrecio() {
@@ -35,6 +42,10 @@ public class Transaccion {
         return proveedor;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public void setPrecio(int precio) {
         this.precio = precio;
     }
@@ -45,5 +56,10 @@ public class Transaccion {
 
     public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
+    }
+    
+    @Override
+    public String toString(){
+        return getId();
     }
 }

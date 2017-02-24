@@ -12,7 +12,7 @@ public class Test1 {
 
     public static void main(String[] args) {
         Datos tratarDatos = new Datos();
-
+        
         //Uso de lambdas contexto de paso de parametros
         List<String> lista = tratarDatos.obtenerDatos(new FiltrarInterfaces() {
 
@@ -22,7 +22,7 @@ public class Test1 {
             }
         });
 
-        List<String> lista2 = tratarDatos.obtenerDatos(datos -> datos.subList(2, 4));
+        List<String> lista2 = tratarDatos.obtenerDatos(kkk -> kkk.subList(0, 2));
 
         List<String> lista3 = tratarDatos.obtenerDatos(datos -> {
             if (datos.isEmpty()) {
